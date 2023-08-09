@@ -18,14 +18,18 @@ formSubmit.addEventListener("submit", function (e) {
 /**
  * ADD TASK LOCALSTORAGE
  */
-function addTask(task,detail){
-
+function addTask(task, detail) {
+   
 }
 
 /**
  * CLEAN FORM
  */
-function cleanForm(){
-    
+function cleanForm() {
+    let task = document.getElementById("task");
+    task.value = "";
+
+    let detail = document.getElementById("detail");
+    detail.value = "";
 }
 
