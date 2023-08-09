@@ -1,0 +1,22 @@
+
+
+
+/*MAIN*/
+main{
+    padding: 50px 0 50px 0;
+}
+
+
+
+
+/*FOOTER*/
+footer {
+    background: #212529;
+    padding: 20px 0 20px 0;
+}
+
+.footer-copyright {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
