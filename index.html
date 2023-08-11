@@ -95,6 +95,76 @@
         </div>
     </footer>
 
+
+
+
+    <!--MODAL DELETE-->
+    <div class="modal" tabindex="-1" id="modal-delete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">¿Seguro de Eliminar Tarea?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formDelete">
+                        <input type="hidden" value="" id="delete-index" readonly>
+                        <div class="mb-3">
+                            <label for="delete-task" class="form-label">Tarea</label>
+                            <input type="text" class="form-control" id="delete-task" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="detail" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="delete-detail" rows="2" disabled></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button id="btn-delete" class="btn btn-danger form-control">ELIMINAR TAREA</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!--MODAL UPDATE-->
+    <div class="modal" tabindex="-1" id="modal-update">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Tarea</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formUpdate">
+                        <input type="hidden" value="" id="update-index" readonly>
+                        <div class="mb-3">
+                            <label for="update-task" class="form-label">Tarea</label>
+                            <input type="text" class="form-control" id="update-task" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="update-detail" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="update-detail" rows="2" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button id="btn-update" class="btn btn-danger form-control">ACTUALIZAR TAREA</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     <!--JAVASCRIPT-->
     <script src="./js/bootstrap.js"></script>
     <script src="./js/app.js"></script>
