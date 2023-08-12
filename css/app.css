@@ -8,7 +8,10 @@ main {
     font-size: 40px;
     font-weight: 900;
 }
-
+.form-label{
+    text-transform: uppercase;
+    font-weight: 900;
+}
 
 
 /*FOOTER*/

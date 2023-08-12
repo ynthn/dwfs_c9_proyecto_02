@@ -7,7 +7,11 @@
 * [4. Descripción del proyecto](#4-descripción-del-proyecto)
 
 ## 1. Introducción
-Se desarrollo un CRUD
+Se desarrollo un sistema CRUD, el cual realizara las siguientes acciones:
+* -Crear Tareas
+* -Editar Tareas
+* -Eliminar Tareas
+* -Leer Tareas
 
 
 * Link GitHub Pages: https://ynthn.github.io/dwfs_c9_proyecto_02
@@ -17,6 +21,8 @@ Se desarrollo un CRUD
 * -CSS
 * -BOOTSTRAP 5.3
 * -JAVASCRIPT
+* -GIT/GITHUB
+* -LOCALSTORAGE
 
 ## 3. Prototipo
 ![Prototipo](/img/prototipo.jpg)
@@ -25,3 +31,7 @@ Se desarrollo un CRUD
 * Header: se utilizó navbar de Bootstrap.
 * Prototipo: Desarrollado en Photoshop.
 * Para almacenar datos se utilizo localStorage.
+* Se uso Modal de Bootstrap para mensajes de eliminar y editar
+* Para trabajar los datos se uso Array de JavaScript
+* JSON.stringify() este metodo se uso para covertir el Array JavaScript (para este caso) en una cadena JSON
+* JSON.parse() este metodo se uso para convertir la cadena JSON en un Objeto JavaScript

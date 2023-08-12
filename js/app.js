@@ -1,5 +1,8 @@
-
-
+/**
+ * FOR MODAL
+ */
+const modalUpdate = new bootstrap.Modal(document.getElementById('modal-update'));
+const modalDelete = new bootstrap.Modal(document.getElementById('modal-delete'));
 
 /**
  * EVENT ADD TASK
@@ -41,10 +44,8 @@ function cleanForm() {
     document.getElementById("task").value = "";
     document.getElementById("detail").value = "";
 }
-//const modalUpdate = new bootstrap.Modal(document.getElementById('modal-delete'));
 
 
-const modalDelete = new bootstrap.Modal(document.getElementById('modal-delete'));
 /**
  * SHOW MODAL DELETE DATA
  * @param {*} index 
@@ -70,6 +71,8 @@ function showModalDelete(index) {
  */
 function hideModalDelete() {
     document.getElementById("delete-index").value = "";
+    document.getElementById("delete-task").value = "";
+    document.getElementById("delete-detail").value = "";
 
     modalDelete.hide();
 }
@@ -98,6 +101,63 @@ formDelete.addEventListener("submit", function (e) {
     hideModalDelete();
 });
 
+/**
+ * HIDE MODAL UPDATE DATA
+ */
+function hideModalUpdate() {
+    document.getElementById("update-index").value = "";
+    document.getElementById("update-task").value = "";
+    document.getElementById("update-detail").value = "";
+
+    modalUpdate.hide();
+}
+
+/**
+ * SHOW MODAL UPDATE DATA
+ * @param {*} index 
+ */
+function showModalUpdate(index) {
+    document.getElementById("update-index").value = index;
+
+    let listData;
+    if (window.localStorage.getItem("listData") == null) {
+        listData = [];
+    } else {
+        listData = JSON.parse(window.localStorage.getItem("listData"));
+    }
+
+    document.getElementById("update-task").value = listData[index].task;
+    document.getElementById("update-detail").value = listData[index].detail;
+
+    modalUpdate.show();
+}
+
+
+
+/**
+ * SUBMIT UPDATE DATA
+ */
+let formUpdate = document.getElementById("formUpdate");
+formUpdate.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let index = document.getElementById("update-index").value;
+
+    let listData;
+    if (window.localStorage.getItem("listData") == null) {
+        listData = [];
+    } else {
+        listData = JSON.parse(window.localStorage.getItem("listData"));
+    }
+
+    listData[index].task = document.getElementById("update-task").value;
+    listData[index].detail = document.getElementById("update-detail").value;
+
+    window.localStorage.setItem("listData", JSON.stringify(listData));
+
+    showData();
+    hideModalUpdate();
+});
 
 /**
  * SHOW DATA IN TABLE
@@ -127,4 +187,24 @@ function showData() {
 }
 
 
+
+/**
+ * DELETE ALL DATA
+ */
+let deleteAllData = document.getElementById("deleteAllData");
+deleteAllData.addEventListener("click", function (e) {
+    let listData = [];
+    window.localStorage.setItem("listData", JSON.stringify(listData));
+
+    showData();
+});
+
+
+
+
+
+
+/**
+ * SHOW ALL DATA
+ */
 showData();
