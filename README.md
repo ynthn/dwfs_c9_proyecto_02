@@ -12,9 +12,7 @@ Se desarrollo un sistema CRUD, el cual realizara las siguientes acciones:
 * -Editar Tareas
 * -Eliminar Tareas
 * -Leer Tareas
-
-
-* Link GitHub Pages: https://ynthn.github.io/dwfs_c9_proyecto_02
+* -Link GitHub Pages: https://ynthn.github.io/dwfs_c9_proyecto_02
 
 ## 2. Tecnologías utilizadas
 * -HTML 5
